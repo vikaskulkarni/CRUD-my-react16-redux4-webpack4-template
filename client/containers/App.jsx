@@ -1,12 +1,28 @@
 import React from "react";
-import { UserCtr } from "./CombinedContainers";
+import { Route } from "react-router-dom";
 import "./styles.scss";
+import Header from "../components/Header";
+import { ContactListCtr, ContactFormCtr } from "./CombinedContainers";
+import SideNavigation from "../components/SideNavigation";
 
 const App = () => (
-  <div className="mainStyle">
-    <h3>Hello React16, Redux7, Webpack4, Bootstrap4, SCSS !</h3>
-    <hr />
-    <UserCtr />
+  <div>
+    <Header />
+
+    <div className="container-fluid px-4">
+      <div className="row ml-1">
+        <div className="col-sm-2 side-box border-gradient mt-3">
+          <SideNavigation />
+        </div>
+        <div className="col-sm-10">
+          <div className="box">
+            <Route path="/contacts/new" component={ContactFormCtr} />
+            <Route path="/contacts/edit/:_id" component={ContactFormCtr} />
+            <Route exact path="/" component={ContactListCtr} />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 );
 

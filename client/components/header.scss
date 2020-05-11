@@ -1,0 +1,50 @@
+.btn-outline-primary {
+  border-color: rgba(0, 0, 0, 0.9);
+}
+
+nav {
+  border-radius: 0.2rem;
+}
+
+.headerCls {
+  h1 {
+    text-shadow: 1px 3px 1px #adadad;
+    float: left;
+    position: relative;
+    font-size: 35px;
+    margin-top: 10px;
+    font-family: "Lobster", helvetica, arial;
+  }
+
+  h1 a {
+    text-decoration: none;
+    color: #3e82ab;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  h1:after {
+    content: "Dynamic";
+    color: #d6d6d6;
+    text-shadow: 0 1px 0 white;
+  }
+
+  .btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  .btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+  }
+}

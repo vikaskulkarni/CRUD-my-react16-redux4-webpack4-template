@@ -1,0 +1,23 @@
+.alert-box {
+  max-width: 300px;
+  position: fixed;
+  top: 10px;
+  right: 24px;
+
+  .alert-icon {
+    padding-bottom: 20px;
+  }
+
+  .alert {
+    height: 4.5rem;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .alert-success,
+  .alert-danger {
+    background: transparent;
+    border: none;
+  }
+}

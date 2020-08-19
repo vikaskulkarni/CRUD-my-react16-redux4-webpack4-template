@@ -4,12 +4,16 @@ import "./card.scss";
 
 const ContactCard = ({ contact, deleteContact }) => (
   <div className="card">
-    <div className="card-header">
-      {contact.firstName} {contact.lastName}
-    </div>
     <div className="card-body">
-      <h5 className="card-title">{contact.email}</h5>
-      <p className="card-text">{contact.phone}</p>
+      {Object.keys(contact).map((key, index) => (
+        <div key={key}>
+          <span className="card-text">{key.toUpperCase()}: </span>
+          <span className="card-title">
+            <strong>{contact[key]}</strong>
+          </span>
+        </div>
+      ))}
+
       <div style={{ float: "right" }}>
         <NavLink
           className="fa fa-edit fa-lg mr-3"
